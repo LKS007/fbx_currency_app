@@ -24,6 +24,13 @@
   /*text-transform: lowercase;*/
 }
 
+.fb__container {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 .container.fb_container {
   padding: 0px 25px;
 }

@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   
   get 'signup' => 'users#new'
   resources :users
+
+  get 'admin' => 'admins#index'
   
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
