@@ -64,4 +64,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
+group :test, :development do
+  #gem 'rspec-rails', '~> 3.8.0'
+end
 gem 'coveralls', require: false
