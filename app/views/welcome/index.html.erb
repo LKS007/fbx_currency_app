@@ -1,10 +1,49 @@
 <div class="fb__container">
-  <div class="row text-center">
+  <!--<div class="row text-center">
     <h1>Good day, my Friend!</h1>
-  </div>
+  </div>-->
 
   <div class="row">
-    <div class="col-xs-12 col-md-8">One</div>
-    <div class="col-xs-6 col-md-4">Two</div>
+    <div class="row text-center text-converter-header">
+      <p>Currency Converter</p>
+    </div>
+    <% if @currency %>
+      <div class="row text-center row__with_border row-flex align-middle">
+        <div class="col col-sm-2">
+        </div>
+        <div class="col col-sm-3 align-middle">
+          <div class="inner_block">
+            <%= @currency.currency_from.currency_code %>
+          </div>
+        </div>
+        <div class="col col-sm-2 col-image">
+          <%= image_tag('exchange.jpg', alt: 'exchange') %>
+        </div>
+        <div class="col col-sm-3">
+          <div class="inner_block">
+            <%= @currency.currency_to.currency_code %>
+          </div>
+        </div>
+        <div class="col col-sm-2">
+        </div>
+      </div>
+      <div class="row text-center">
+        <span class="fb_rate_value">
+          <%= @currency.rate %>
+          <% if @currency.currency_to.sign %>
+            <%= @currency.currency_to.sign %>
+          <% else %>
+            <%= @currency.currency_to.currency_code[0] %>
+          <% end %>
+        </span>
+      </div>
+      <div class="row text-center row_update_information_text">
+        <span>This information will update at <%= @currency.date_to %></span>
+      </div>
+    <% else %>
+      <div class="row text-center">
+        Sorry, we don't have current exchange rate
+      </div>
+    <% end %>
   </div>
 </div>

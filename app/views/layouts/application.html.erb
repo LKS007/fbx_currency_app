@@ -27,8 +27,9 @@
           <div id="navbar6" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="">
-                <a href="#">
+                <%= link_to controller: :welcome, action: :index do %>
                   <span class="glyphicon glyphicon-home"></span>Home</a>
+                <% end %>
               </li>
               <li class="">
                 <%= link_to controller: :admins, action: :index do %>
@@ -63,6 +64,7 @@
       </nav>
 
       </div>
+      <%= render 'shared/flashes' %>
     
     <%= yield %>
   </body>

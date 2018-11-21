@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2018_11_18_232410) do
   create_table "currencies_relations", force: :cascade do |t|
     t.string "currency_code", null: false
     t.string "currency_name"
+    t.string "sign"
   end
 
   create_table "exchange_rates", force: :cascade do |t|

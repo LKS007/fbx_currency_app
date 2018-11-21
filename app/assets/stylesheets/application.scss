@@ -24,6 +24,52 @@
   /*text-transform: lowercase;*/
 }
 
+.text-converter-header {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.row_update_information_text {
+  margin-top: 20px;
+  span {
+    font-size: 12px;
+  }
+}
+
+.fb_rate_value {
+  color: green;
+  font-size: 18px;
+}
+
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row__with_border {
+  .col {
+    #border: 1px solid black;
+    padding: 5px;
+    position: relatieve;
+  }
+  .inner_block {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .col-image {
+    img {
+      max-width: 80px;
+      max-height: 80px;
+    } 
+  }
+}
+
 .fb__container {
   .row {
     margin-left: 0;

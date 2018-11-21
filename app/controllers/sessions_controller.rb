@@ -6,9 +6,10 @@ class SessionsController < ApplicationController
     @user = User.find_by(login: params[:session][:login])
     if @user && @user.authenticate(params[:session][:password])
       session[:user_id] = @user.id
-      redirect_to '/admin'
+      redirect_to '/admin', notice: "Yeah! You input correct login/password"
     else
-      redirect_to '/login'
+
+      redirect_to '/login', alert: "Invalid password or login"
     end 
   end
 

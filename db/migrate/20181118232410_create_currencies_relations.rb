@@ -3,6 +3,7 @@ class CreateCurrenciesRelations < ActiveRecord::Migration[5.2]
     create_table :currencies_relations do |t|
       t.string :currency_code, null: false
       t.string :currency_name
+      t.string :sign
     end
   end
 end
