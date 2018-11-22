@@ -9,22 +9,22 @@
     </div>
     <% if @currency %>
       <div class="row text-center row__with_border row-flex align-middle">
-        <div class="col col-sm-2">
+        <div class="col col-xs-2">
         </div>
-        <div class="col col-sm-3 align-middle">
+        <div class="col col-xs-3 align-middle">
           <div class="inner_block">
             <%= @currency.currency_from.currency_code %>
           </div>
         </div>
-        <div class="col col-sm-2 col-image">
+        <div class="col col-xs-2 col-image">
           <%= image_tag('exchange.jpg', alt: 'exchange') %>
         </div>
-        <div class="col col-sm-3">
+        <div class="col col-xs-3">
           <div class="inner_block">
             <%= @currency.currency_to.currency_code %>
           </div>
         </div>
-        <div class="col col-sm-2">
+        <div class="col col-xs-2">
         </div>
       </div>
       <div class="row text-center">

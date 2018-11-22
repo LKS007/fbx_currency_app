@@ -30,6 +30,58 @@
   font-size: 20px;
 }
 
+.form.fb__form {
+  
+  .error_messages {
+    color: red;
+  }
+
+  .field_with_errors {
+    label {
+      color: red;
+    }
+    input {
+      border-color: red;
+    }
+  }
+
+  width: 400px;
+  form {
+    max-width: 500px;
+    width: 100%;
+  }
+  label {
+    margin-top: 10px;
+  }
+  input {
+    width: 100%;
+  }
+  select {
+    width: 100%;
+  }
+  input[type=text] {
+    height: 34px;
+  }
+  .control-group__one_row {
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+  .btn-success {
+    margin-top: 10px;
+  }
+  .control-group__curience {
+    width: 45%;
+  }
+  .control-group__date {
+    width: 55%;
+  }
+  .control-group__time {
+    width: 35%;
+  }
+}
+
 .row_update_information_text {
   margin-top: 20px;
   span {

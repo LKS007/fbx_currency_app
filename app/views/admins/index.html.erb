@@ -1,3 +1,77 @@
-YOU WILL SEE IT IF YOR IS AUTHORIZATED!!!
+<div class="content">
+  <div class="row text-center">
+    <h1>Hello <%= current_user.login %></h1>
+  </div>
+  <div class="row text-center">
+    <p>You can change rate on this page!</p>
+  </div>
 
-<%= @rate.id %>
+  <div class="row form fb__form">
+    <%#= form_with url: '/admin', scope: :exchange_currience do |f| %>
+    <%= form_with model: @currency, local: true do |f| %>
+      <%#= f.text_field :currency_from_id, disabled: true %>
+      <%#= f.text_field :currency_to_id, disabled: true %>
+
+      <% if @currency.errors.any? %>
+        <div class="error_messages">
+          <%= @currency.errors.full_messages.first %>
+        </div>
+      <% end %>
+
+
+      <%= f.hidden_field :is_forcing, value: true %>
+
+      <% if !@currency.id.nil? %>
+        <%= f.hidden_field :id %>
+      <% end %>
+
+      <div class="control-group__one_row">
+
+        <div class="control-group__curience">
+          <%= f.label :currency_from_id, 'Currency From' %>
+          <% if @currency.currency_from_id.nil? %>
+            <%= f.collection_select :currency_from_id, CurrenciesRelation.all, :id, :currency_code, {selected: 2}, {class: 'form-control', disabled: true}%>
+            <%= f.hidden_field :currency_from_id, value: 2 %>
+          <% else %>
+            <%= f.collection_select :currency_from_id, CurrenciesRelation.all, :id, :currency_code, {}, {class: 'form-control', disabled: true}%>
+            <%= f.hidden_field :currency_from_id %>
+          <% end %>
+        </div>
+
+        <div class="control-group__curience">
+          <%= f.label :currency_to_id, 'Currency To' %>
+          <% if @currency.currency_to_id.nil? %>
+            <%= f.collection_select :currency_to_id, CurrenciesRelation.all, :id, :currency_code, {selected: 1}, {class: 'form-control', disabled: true} %>
+            <%= f.hidden_field :currency_to_id, value: 1 %>
+          <% else %>
+            <%= f.collection_select :currency_to_id, CurrenciesRelation.all, :id, :currency_code, {}, {
+              class: 'form-control', disabled: true} %>
+            <%= f.hidden_field :currency_to_id %>
+          <% end %>
+        </div>
+      </div>
+
+      <%= f.label :rate %>
+      <%= f.text_field :rate, required: true%>
+
+      <div class="control-group__one_row">
+        <div class="control-group__date">
+          <%= f.label :date_to %>
+
+          <% date_value = @currency.date_to.nil? ? Time.now.strftime('%Y-%m-%d') : @currency.date_to.to_date %>
+
+          <%= f.date_field :date_to, required: true,  min: Date.today, value: date_value %>
+        </div>
+        <div class="control-group__time">
+          <%= f.label :time_to %>
+
+          <% time_value = @currency.date_to.nil? ? Time.now.strftime("%H:%M") : @currency.date_to.strftime("%H:%M") %>
+
+          <%= f.time_field :time_to, required: true, value: time_value %>
+        </div>
+      </div>
+
+      <%= f.submit "Add new rate", {class: 'btn btn-success'}%>
+    <% end %>
+  </div>
+</div>

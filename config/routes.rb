@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new'
   resources :users
 
-  get 'admin' => 'admins#index'
+  get 'admin' => 'admins#index', :as => :exchange_rates
+  post 'admin' => 'admins#create', :as => :exchange_rate
+  patch 'admin' => 'admins#update'
+  #match 'admin' => 'admins#create', :as => :exchange_rate
   
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
