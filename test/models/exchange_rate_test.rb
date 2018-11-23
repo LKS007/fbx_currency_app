@@ -2,7 +2,6 @@ require 'test_helper'
 
 class ExchangeRateTest < ActiveSupport::TestCase
   test "The Exchange Rate create" do
-    
     a = ExchangeRate.new
     a.currency_to_id = 1
     a.currency_from_id = 2

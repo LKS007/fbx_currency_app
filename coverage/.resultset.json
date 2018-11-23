@@ -146,18 +146,13 @@
   },
   "MiniTest": {
     "coverage": {
-      "/var/www/html/funbox/fb_app/app/models/user.rb": [
+      "/var/www/html/funbox/fb_app/app/models/currencies_relation.rb": [
+        1,
         1,
         1,
         null
       ],
       "/var/www/html/funbox/fb_app/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
-      "/var/www/html/funbox/fb_app/app/models/currencies_relation.rb": [
-        1,
         1,
         1,
         null
@@ -179,7 +174,7 @@
         1,
         null,
         1,
-        2,
+        1,
         0,
         0,
         0,
@@ -189,9 +184,16 @@
         null,
         null,
         1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/var/www/html/funbox/fb_app/app/models/user.rb": [
+        1,
         1,
         null,
-        null,
+        1,
         null
       ],
       "/var/www/html/funbox/fb_app/app/controllers/welcome_controller.rb": [
@@ -341,6 +343,6 @@
         0
       ]
     },
-    "timestamp": 1543008064
+    "timestamp": 1543015003
   }
 }

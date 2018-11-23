@@ -1,0 +1,10 @@
+rur:
+  id: 1
+  currency_code: RUR
+  currency_name: Russian Ruble
+  
+usd:
+  id: 2
+  currency_code: USD
+  currency_name: American Dollar
+  sign: $
