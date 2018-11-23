@@ -4,7 +4,9 @@ class AdminsController < ApplicationController
 
   def index
     @rate = ExchangeRate.find_by(is_forcing: false)
-    @currency = ExchangeRate.find_by(is_forcing: true)
+    @currency_history = ExchangeRate.where(is_forcing: true).order("id DESC")
+    @currency = ExchangeRate.where(["is_forcing = ? and date_to > ?", true, DateTime.now]).order("id DESC").first
+    #@currency = ExchangeRate.find_by(is_forcing: true)
     @currency ||= ExchangeRate.new
   end
 
@@ -21,7 +23,6 @@ class AdminsController < ApplicationController
   def update
     @currency = ExchangeRate.find(params[:exchange_rate][:id])
     if @currency.update_attributes(exchange_param)
-      p "Nice"
       redirect_to "/admin"
     else
       render "index"

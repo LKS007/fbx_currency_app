@@ -4,5 +4,4 @@ rvm:
 
 script:
   - bin/rake db:migrate
-  - bin/rake db:seed
   - bin/rake

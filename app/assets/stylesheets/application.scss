@@ -30,6 +30,17 @@
   font-size: 20px;
 }
 
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.table {
+  td, th {
+    text-align: center;
+  }
+}
+
 .form.fb__form {
   
   .error_messages {

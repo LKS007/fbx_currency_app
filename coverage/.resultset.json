@@ -156,7 +156,46 @@
         1,
         null
       ],
+      "/var/www/html/funbox/fb_app/app/models/currencies_relation.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/var/www/html/funbox/fb_app/app/models/exchange_rate.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/var/www/html/funbox/fb_app/app/controllers/welcome_controller.rb": [
+        1,
         1,
         1,
         null,
@@ -167,11 +206,11 @@
         1,
         null,
         1,
-        2,
+        3,
         null,
         null,
         1,
-        0,
+        1,
         null,
         null
       ],
@@ -195,19 +234,45 @@
         1,
         null
       ],
-      "/var/www/html/funbox/fb_app/app/models/exchange_rate.rb": [
-        1,
-        1,
+      "/var/www/html/funbox/fb_app/app/controllers/admins_controller.rb": [
         1,
         null,
         1,
         null,
-        null
-      ],
-      "/var/www/html/funbox/fb_app/app/models/currencies_relation.rb": [
         1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
         1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
         1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
         null
       ],
       "/var/www/html/funbox/fb_app/app/channels/application_cable/channel.rb": [
@@ -249,18 +314,6 @@
         0,
         0
       ],
-      "/var/www/html/funbox/fb_app/app/controllers/admins_controller.rb": [
-        0,
-        null,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0
-      ],
       "/var/www/html/funbox/fb_app/app/controllers/sessions_controller.rb": [
         0,
         0,
@@ -272,6 +325,7 @@
         0,
         0,
         0,
+        null,
         0,
         0,
         0,
@@ -287,6 +341,6 @@
         0
       ]
     },
-    "timestamp": 1542741789
+    "timestamp": 1543008064
   }
 }

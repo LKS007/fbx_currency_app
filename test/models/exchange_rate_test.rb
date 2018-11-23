@@ -20,7 +20,5 @@ class ExchangeRateTest < ActiveSupport::TestCase
     create_var = a.save
 
     assert_equal true, create_var
-
-    #assert true
   end
 end
