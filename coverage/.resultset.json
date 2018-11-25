@@ -181,6 +181,8 @@
         0,
         0,
         null,
+        1,
+        null,
         null,
         null,
         1,
@@ -200,6 +202,17 @@
         1,
         1,
         1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
         null,
         null
       ],
@@ -222,6 +235,30 @@
       ],
       "/var/www/html/funbox/fb_app/app/helpers/admin_helper.rb": [
         1,
+        null
+      ],
+      "/var/www/html/funbox/fb_app/app/helpers/exchange_rate_helper.rb": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/var/www/html/funbox/fb_app/app/helpers/session_helper.rb": [
@@ -250,6 +287,7 @@
         null,
         null,
         1,
+        0,
         0,
         0,
         0,
@@ -316,6 +354,29 @@
         0,
         0
       ],
+      "/var/www/html/funbox/fb_app/app/controllers/exchange_rates_controller.rb": [
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "/var/www/html/funbox/fb_app/app/controllers/sessions_controller.rb": [
         0,
         0,
@@ -343,6 +404,6 @@
         0
       ]
     },
-    "timestamp": 1543015003
+    "timestamp": 1543178322
   }
 }

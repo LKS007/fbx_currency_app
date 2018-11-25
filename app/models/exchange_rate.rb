@@ -20,6 +20,8 @@ class ExchangeRate < ApplicationRecord
       minutes = time_array.shift
       new_date = date_to.change(hour: hours, min: minutes)
       self.date_to = new_date
+    else
+      self.updated_at = Time.current
     end
   end
 

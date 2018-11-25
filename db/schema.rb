@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2018_11_18_232410) do
     t.decimal "rate", precision: 8, scale: 2
     t.boolean "is_main_exchange", default: false
     t.datetime "date_to"
+    t.datetime "updated_at", null: false
     t.index ["currency_from_id"], name: "index_exchange_rates_on_currency_from_id"
     t.index ["currency_to_id"], name: "index_exchange_rates_on_currency_to_id"
   end

@@ -1,6 +1,6 @@
 class AdminsController < ApplicationController
   
-  before_action :require_user, only: [:index, :show]
+  before_action :require_user, only: [:index]
 
   def index
     @rate = ExchangeRate.find_by(is_forcing: false)
@@ -12,6 +12,7 @@ class AdminsController < ApplicationController
 
   def create
     @currency = ExchangeRate.new(exchange_param)
+    @currency_history = ExchangeRate.where(is_forcing: true).order("id DESC")
     if @currency.valid?
       @currency.save
       redirect_to "/admin"

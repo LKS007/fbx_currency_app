@@ -50,14 +50,14 @@
       <div class="control-group__date">
         <%= f.label :date_to %>
 
-        <% date_value = @currency.date_to.nil? ? Time.now.strftime('%Y-%m-%d') : @currency.date_to.to_date %>
+        <% date_value = @currency.date_to.nil? ? Time.current.strftime('%Y-%m-%d') : @currency.date_to.to_date %>
 
         <%= f.date_field :date_to, required: true,  min: Date.today, value: date_value %>
       </div>
       <div class="control-group__time">
         <%= f.label :time_to %>
 
-        <% time_value = @currency.date_to.nil? ? Time.now.strftime("%H:%M") : @currency.date_to.strftime("%H:%M") %>
+        <% time_value = @currency.date_to.nil? ? Time.current.strftime("%H:%M") : @currency.date_to.strftime("%H:%M") %>
 
         <%= f.time_field :time_to, required: true, value: time_value %>
       </div>

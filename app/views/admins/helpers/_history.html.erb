@@ -1,4 +1,4 @@
-<div class="row text-center">
+<div class="row text-center fb__history_row">
   <p>Force History</p>    
   <div class="history_table">
     <% if @currency_history.nil? %>
@@ -14,9 +14,14 @@
         <% @currency_history.each do |story| %>
           <tr class="table-success">
             <td><%= story.id %></td>
-            <td><%= story.rate %></td>
-            <td><%= story.date_to %></td>
-            <td>Delete</td>
+            <td><%= number_to_currency(story.rate, unit: "") %></td>
+            <td><%= story.date_to.strftime('%Y-%m-%d %H:%M') %></td>
+            <td>
+              <%= link_to  remove_exchange_rate_path(story), method: :delete, id: story.id  do %>
+              
+                Delete
+              <% end %>
+            </td>
           </tr>
         <% end %>
       </tbody>

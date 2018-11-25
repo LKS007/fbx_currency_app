@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   get 'welcome/index'
   root 'welcome#index'
+  get 'updated_index_with_ajx' => 'welcome#updated_index_with_ajx'
   
   get 'signup' => 'users#new'
   resources :users
+
+  get 'exchange_rates/update'
+  delete 'exchange_rates/:id' => "exchange_rates#destroy", as: :remove_exchange_rate
 
   get 'admin' => 'admins#index', :as => :exchange_rates
   post 'admin' => 'admins#create', :as => :exchange_rate

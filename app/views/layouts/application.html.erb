@@ -23,13 +23,28 @@
             <%= link_to root_path, :class => "navbar-brand" do %>
               My App
             <% end %>
+            <% if current_page?(controller: 'admins') %>
+              <ul class="nav navbar-nav">
+                <li>
+                  <%= link_to controller: :exchange_rates, action: :update do %>
+                    <span class="glyphicon glyphicon-refresh"></span>
+                    Update Rate
+                  <% end %>
+                </li>
+                <li>
+                  <a>
+                    RBC: <%= number_to_currency(@rate.rate, unit: "") %>
+                  </a>
+                </li>
+              </ul>
+            <% end %>
           </div>
           <div id="navbar6" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="">
-                <%= link_to controller: :welcome, action: :index do %>
+                <!--<%= link_to controller: :welcome, action: :index do %>
                   <span class="glyphicon glyphicon-home"></span>Home</a>
-                <% end %>
+                <% end %>-->
               </li>
               <li class="">
                 <%= link_to controller: :admins, action: :index do %>

@@ -7,6 +7,7 @@ class AddExchangeRateTable < ActiveRecord::Migration[5.2]
       t.decimal :rate, precision: 8, scale: 2
       t.boolean :is_main_exchange, default: false
       t.datetime :date_to, default: -> { 'CURRENT_TIMESTAMP' }
+      t.datetime "updated_at", null: false
     end
   end
 end
