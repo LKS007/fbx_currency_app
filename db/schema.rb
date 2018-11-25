@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2018_11_18_232410) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "currencies_relations", force: :cascade do |t|
     t.string "currency_code", null: false
     t.string "currency_name"
@@ -19,12 +22,12 @@ ActiveRecord::Schema.define(version: 2018_11_18_232410) do
   end
 
   create_table "exchange_rates", force: :cascade do |t|
-    t.integer "currency_from_id"
-    t.integer "currency_to_id"
+    t.bigint "currency_from_id"
+    t.bigint "currency_to_id"
     t.boolean "is_forcing", default: false
     t.decimal "rate", precision: 8, scale: 2
     t.boolean "is_main_exchange", default: false
-    t.datetime "date_to"
+    t.datetime "date_to", default: -> { "now()" }
     t.datetime "updated_at", null: false
     t.index ["currency_from_id"], name: "index_exchange_rates_on_currency_from_id"
     t.index ["currency_to_id"], name: "index_exchange_rates_on_currency_to_id"
