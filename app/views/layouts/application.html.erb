@@ -31,11 +31,13 @@
                     Update Rate
                   <% end %>
                 </li>
-                <li>
-                  <a>
-                    RBC: <%= number_to_currency(@rate.rate, unit: "") %>
-                  </a>
-                </li>
+                <% if !@rate.nil? %>
+                  <li>
+                    <a>
+                      RBC: <%= number_to_currency(@rate.rate, unit: "") %>
+                    </a>
+                  </li>
+                <% end %>
               </ul>
             <% end %>
           </div>

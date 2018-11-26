@@ -1,0 +1,13 @@
+one:
+  id: 1
+  rate: 62.00
+  currency_from_id: 2
+  currency_to_id: 1
+  is_forcing: true
+
+not_force:
+  id: 2
+  rate: 60.00
+  currency_from_id: 2
+  currency_to_id: 1
+  is_forcing: false
