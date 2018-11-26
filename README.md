@@ -2,27 +2,8 @@
 
 [![Build Status](https://travis-ci.org/LKS007/fbx_currency_app.svg?branch=master)](https://travis-ci.org/LKS007/fbx_currency_app)
 
-# README
+FB_CURRENCY
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Приложение отображает курс валюты! Можно изменить курс валюты на странице Edit Currience. Для попадания в админскую часть нужно авторизоваться:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+admin / admin

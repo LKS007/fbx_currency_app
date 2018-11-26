@@ -69,3 +69,4 @@ group :test, :development do
   #gem 'rspec-rails', '~> 3.8.0'
 end
 gem 'coveralls', require: false
+gem 'whenever', require: false
