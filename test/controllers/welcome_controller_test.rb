@@ -6,4 +6,14 @@ class WelcomeControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "check xhr" do
+    get "/updated_index_with_ajx", xhr: true
+    assert_response :success
+  end
+
+  test "check without xhr" do
+    get "/updated_index_with_ajx"
+    assert_response :redirect
+  end
+
 end
