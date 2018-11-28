@@ -10,6 +10,7 @@ class ExchangeRate < ApplicationRecord
 
   before_save :update_time_to
   after_find :change_rate_value
+  after_commit :check_if_main_value_need_update
 
   private
 
@@ -23,6 +24,13 @@ class ExchangeRate < ApplicationRecord
     else
       self.updated_at = Time.current
     end
+  end
+
+  def check_if_main_value_need_update
+    ActionCable.server.broadcast(
+      "currencies",
+      update_value: true
+    )
   end
 
   def change_rate_value

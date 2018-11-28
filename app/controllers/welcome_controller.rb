@@ -1,7 +1,6 @@
 class WelcomeController < ApplicationController
   include ExchangeRateHelper
   def index
-    #@currency = ExchangeRate.find_by(is_main_exchange: true)
     @currency = get_current_exchange_rate
   end
 
